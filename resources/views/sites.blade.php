@@ -1,14 +1,15 @@
 @extends('paginamestre')
 @section('Titulo')
-Projeto 1
+Contactos
 @endsection
 <img style="text-align:center" src="{{asset('imagens/aedah.jpg')}}">
 @section('Cabecalho')
-Contacto
+Sites
 @endsection
 @section('Corpo')
-<br><br><br>
-Para entrar em contacto com a nossa loja, contactos atraves de:
-<h4>Numero de telemovel:915890543</h4>
-<h4>Numero de telefone:252457235</h4>
+@foreach ($sites as $numero)
+    <div style="text-align: center">
+    <p><a href="{{$numero}}" target="_blank"><h5>{{$numero}}</h5></a></p>
+    </div>
+@endforeach
 @endsection

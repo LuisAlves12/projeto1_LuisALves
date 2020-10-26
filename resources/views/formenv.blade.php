@@ -4,11 +4,13 @@ Projeto 1
 @endsection
 <img style="text-align:center" src="{{asset('imagens/aedah.jpg')}}">
 @section('Cabecalho')
-Contacto
+Formulario enviado
 @endsection
 @section('Corpo')
-<br><br><br>
-Para entrar em contacto com a nossa loja, contactos atraves de:
-<h4>Numero de telemovel:915890543</h4>
-<h4>Numero de telefone:252457235</h4>
+<div style="text-align: center">
+Nome: {{$nome}}<br>
+Idade:{{$idade}}<br>
+Marca Favorita:{{$marcafav}}<br>
+Tem carta:{{$carta}}<br>
+</div>
 @endsection

@@ -15,20 +15,26 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('view.index');
 
 Route::get('/noticias', function(){
     return view('noticias');
-});
+})->name('view.noticias');
 
 Route::get('/empresa', function(){
     return view('empresa');
-});
+})->name('view.empresa');
 
 Route::get('/onde-estamos', function(){
     return view('onde-estamos');
-});
+})->name('view.ondeestamos');
 
 Route::get('/contactos', function(){
     return view('contactos');
-});
+})->name('view.contactos');
+
+Route::post('/formulario', 'App\Http\Controllers\PortalController@processarFormulario')
+    ->name('view.formulario');
+
+Route::get('/mostrar', 'App\Http\Controllers\PortalController@mostraSite')
+    ->name('view.mostrar');
