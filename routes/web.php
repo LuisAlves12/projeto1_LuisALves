@@ -13,25 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('view.index');
+Route::get('/', 'App\Http\Controllers\PortalController@index')
+    ->name('view.index');
 
-Route::get('/noticias', function(){
-    return view('noticias');
-})->name('view.noticias');
+Route::get('/noticias', 'App\Http\Controllers\PortalController@noticias')
+    ->name('view.noticias');
 
-Route::get('/empresa', function(){
-    return view('empresa');
-})->name('view.empresa');
+Route::get('/empresa', 'App\Http\Controllers\PortalController@empresa')
+    ->name('view.empresa');
 
-Route::get('/onde-estamos', function(){
-    return view('onde-estamos');
-})->name('view.ondeestamos');
+Route::get('/onde-estamos', 'App\Http\Controllers\PortalController@ondeestamos')
+    ->name('view.ondeestamos');
 
-Route::get('/contactos', function(){
-    return view('contactos');
-})->name('view.contactos');
+Route::get('/contactos', 'App\Http\Controllers\PortalController@contactos')
+    ->name('view.contactos');
 
 Route::post('/formulario', 'App\Http\Controllers\PortalController@processarFormulario')
     ->name('view.formulario');

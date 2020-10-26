@@ -28,4 +28,20 @@ class PortalController extends Controller
         $carta = $request -> carta;
         return view('formenv',['nome'=>$nome,'idade'=>$idade,'marcafav'=>$marcafav,'carta'=>$carta]);
     }
+
+    public function index(){
+        return view('index');
+    }
+    public function noticias(){
+        return view('noticias');
+    }
+    public function empresa(){
+        return view('empresa');
+    }
+    public function ondeestamos(){
+        return view('ondeestamos');
+    }
+    public function contacto(){
+        return view('contactos');
+    }
 }
